@@ -1,0 +1,21 @@
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+
+using Tyuiu.BarminaSK.Sprint0.Task2.V0.Lib;
+namespace Tyuiu.BarminaSK.Sprint0.Task2.V0.Test
+{
+    [TestClass]
+    public class DataServiceTest
+    {
+        [TestMethod]
+        public void CheckGetMessageValid()
+        {
+            //Области создания методов тестирования,методов из библиотеки
+            var name = "София";
+            var res = DataService.GetMessage(name);
+
+            //Вызываем класс Assert и метод AreEqual
+            Assert.AreEqual("Привет..., София", res);
+        }
+    }
+}
